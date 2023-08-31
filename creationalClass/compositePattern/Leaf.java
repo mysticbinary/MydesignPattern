@@ -1,15 +1,14 @@
 package creationalClass.compositePattern;
 
-public class Leaf implements Counter{
-    private int sum = 0;
+public class Leaf implements Myfile {
+    private String name;
 
-    public Leaf(int sum) {
-        this.sum = sum;
+    public Leaf(String name) {
+        this.name = name;
     }
 
-    @Override
-    public int count() {
-        return sum;
+    public void showInfo() {
+        System.out.println("Leaf: " + name);
     }
 }
 

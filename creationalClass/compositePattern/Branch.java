@@ -3,28 +3,27 @@ package creationalClass.compositePattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Branch implements Counter {
+public class Branch implements Myfile {
+    private String name;
+    private List<Myfile> components;
 
-    private List<Counter> counterList = new ArrayList<>();
-
-    public void add(Counter counter) {
-        counterList.add(counter);
+    public Branch(String name) {
+        this.name = name;
+        this.components = new ArrayList<>();
     }
 
-    public void delete(Counter counter) {
-        counterList.remove(counter);
+    public void addComponent(Myfile component) {
+        components.add(component);
     }
 
-    public List<Counter> getChild() {
-        return counterList;
+    public void removeComponent(Myfile component) {
+        components.remove(component);
     }
 
-    @Override
-    public int count() {
-        int sum = 0;
-        for (Counter counter : counterList) {
-            sum += counter.count();
+    public void showInfo() {
+        System.out.println("Folder: " + name);
+        for (Myfile component : components) {
+            component.showInfo();
         }
-        return sum;
     }
 }

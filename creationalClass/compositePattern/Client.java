@@ -2,16 +2,19 @@ package creationalClass.compositePattern;
 
 public class Client {
     public static void main(String[] args) {
-        System.out.println("开始统计人数");
-        Branch nation = new Branch();
-        nation.add(new Leaf(100)); // 模拟国家下 —— 直辖市1
-        nation.add(new Leaf(200)); // 模拟国家下 ——— 直辖市2
+        // 创建文件和文件夹
+        Myfile file1 = new Leaf("file1.txt");
+        Myfile file2 = new Leaf("file2.doc");
 
-        Branch region = new Branch();
-        region.add(new Leaf(300)); // 模拟国家下 —— 区1
-        region.add(new Leaf(400)); // 模拟国家下 —— 区2
+        Branch folder1 = new Branch("Folder 1");
+        Branch folder2 = new Branch("Folder 2");
 
-        nation.add(region);  // 区加入国家
-        System.out.println(nation.count()); //1000
+        // 组合文件和文件夹
+        folder1.addComponent(file1);
+        folder1.addComponent(file2);
+        folder1.addComponent(folder2);
+
+        // 显示文件系统结构
+        folder1.showInfo();
     }
 }
