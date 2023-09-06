@@ -12,7 +12,6 @@ public class Client {
         // 输出：Observer 1 received message: Hello World!
         //      Observer 2 received message: Hello World!
 
-
     }
 
 }
