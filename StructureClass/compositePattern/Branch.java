@@ -1,4 +1,4 @@
-package creationalClass.compositePattern;
+package StructureClass.compositePattern;
 
 import java.util.ArrayList;
 import java.util.List;

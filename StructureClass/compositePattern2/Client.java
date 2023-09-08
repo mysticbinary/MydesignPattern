@@ -1,4 +1,4 @@
-package creationalClass.compositePattern2;
+package StructureClass.compositePattern2;
 
 public class Client {
     /**

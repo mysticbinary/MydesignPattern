@@ -1,4 +1,4 @@
-package creationalClass.compositePattern;
+package StructureClass.compositePattern;
 
 public class Leaf implements Myfile {
     private String name;
