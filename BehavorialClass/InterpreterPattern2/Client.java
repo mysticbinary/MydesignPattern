@@ -8,7 +8,6 @@ public class Client {
             <city> ::= 韶关|广州
             <person> ::= 老人|妇女|儿童
     */
-
     public static void main(String[] args)
     {
         Context bus=new Context();
